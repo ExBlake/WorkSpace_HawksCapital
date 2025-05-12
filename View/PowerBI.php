@@ -23,7 +23,24 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <?php 
+        require_once(__DIR__ . '/../Controller/UserController.php');
+        $userController = new UserController();
 
+        // Capturamos los parámetros 'plan' y 'empresa' enviados en la URL
+        $planId = isset($_GET['plan']) ? $_GET['plan'] : null;
+        $empresaId = isset($_GET['empresa']) ? $_GET['empresa'] : null;
+
+        // Usamos el método para traer la URL del informe según el plan y la empresa
+        $plan = null;
+        if ($planId !== null && $empresaId !== null) {
+            $plan = $userController->GetReportsByPlansController($planId, $empresaId);
+        }
+
+        // Extraemos la URL del informe, si se encontró el plan, de lo contrario se deja vacío
+        $informeUrl = $plan ? $plan['Url'] : '';
+        $planNombre = $plan ? $plan['Nombre_Plan'] : '';
+    ?>
     <div class="dashboard-container">
         <!-- Sidebar -->
         <?php include 'Layout/HeaderLeft.php'; ?>
@@ -45,7 +62,9 @@
             <!-- Power BI Content -->
             <div class="dashboard-content">
                 <div class="section-header">
-                    <h1>Dashboard Analytics</h1>
+                    <?php if ($planNombre): ?>
+                        <h1><?php echo htmlspecialchars($planNombre); ?></h1>
+                    <?php endif; ?>
                     <div class="header-actions">
                         <div class="date-range-selector">
                             <button class="btn btn-outline">
@@ -60,7 +79,13 @@
                         </button>
                     </div>
                 </div>
-
+                <!-- Nota estática para el usuario -->
+                <div class="user-note">
+                    <i class="fas fa-info-circle note-icon"></i>
+                    <div class="note-message">
+                        <strong>Nota:</strong> Su reporte se actualiza automáticamente cada día hábil a las 14:00 h, para que disponga siempre de información financiera puntual y confiable.
+                    </div>
+                </div>
                 <!-- Power BI Container -->
                 <div class="powerbi-container">
                     <div class="powerbi-header">
@@ -83,18 +108,8 @@
                             <div class="placeholder-icon">
                                 <i class="fas fa-chart-pie"></i>
                             </div>
-                            <p>Cargando dashboard de Power BI...</p>
-                            <!-- Descomentar y reemplazar con tu iframe de Power BI -->
-                            <!--
-                            <iframe 
-                                title="Reporte Power BI" 
-                                width="100%" 
-                                height="100%" 
-                                src="TU_URL_DE_POWER_BI_AQUI" 
-                                frameborder="0" 
-                                allowFullScreen="true">
-                            </iframe>
-                            -->
+                            
+                           
                         </div>
                     </div>
                 </div>
@@ -104,6 +119,9 @@
     </div>
 
     <script src="Funcion_Menu"></script>
+    <script>const informeUrl = <?php echo json_encode($informeUrl); ?>;</script>
+
+
     <script src="Funcion_PowerBI"></script>
     <script src="Funcion_Sincronizacion"></script>
 </body>

@@ -1,28 +1,34 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Empresas</title>
     <link rel="stylesheet" href="Estilos_Menu">
     <link rel="stylesheet" href="Estilos_Empresas">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600&display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap">
     <!-- Fuentes adicionales -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
+    <?php include '../Controller/Token.php'; ?>
 
     <div class="dashboard-container">
         <!-- Sidebar -->
@@ -100,7 +106,8 @@
                     <div class="company-card" data-industry="tech" data-status="active">
                         <div class="company-card-header">
                             <div class="company-logo tech">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple Inc.">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
+                                    alt="Apple Inc.">
                             </div>
                             <div class="company-actions">
                                 <button class="btn-icon edit-company-btn" title="Editar">
@@ -114,7 +121,8 @@
                         <div class="company-info">
                             <h3>Apple Inc.</h3>
                             <span class="company-industry tech">Tecnología</span>
-                            <p class="company-description">Empresa líder en tecnología, fabricante de iPhone, Mac y servicios digitales.</p>
+                            <p class="company-description">Empresa líder en tecnología, fabricante de iPhone, Mac y
+                                servicios digitales.</p>
                         </div>
                         <div class="company-meta">
                             <div class="meta-item">
@@ -157,7 +165,8 @@
                     <div class="company-card" data-industry="tech" data-status="active">
                         <div class="company-card-header">
                             <div class="company-logo tech">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg"
+                                    alt="Microsoft">
                             </div>
                             <div class="company-actions">
                                 <button class="btn-icon edit-company-btn" title="Editar">
@@ -171,7 +180,8 @@
                         <div class="company-info">
                             <h3>Microsoft</h3>
                             <span class="company-industry tech">Tecnología</span>
-                            <p class="company-description">Empresa global de software y hardware, creadora de Windows y Office.</p>
+                            <p class="company-description">Empresa global de software y hardware, creadora de Windows y
+                                Office.</p>
                         </div>
                         <div class="company-meta">
                             <div class="meta-item">
@@ -214,7 +224,8 @@
                     <div class="company-card" data-industry="tech" data-status="active">
                         <div class="company-card-header">
                             <div class="company-logo tech">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg"
+                                    alt="Google">
                             </div>
                             <div class="company-actions">
                                 <button class="btn-icon edit-company-btn" title="Editar">
@@ -228,7 +239,8 @@
                         <div class="company-info">
                             <h3>Google</h3>
                             <span class="company-industry tech">Tecnología</span>
-                            <p class="company-description">Líder en búsqueda web, publicidad online y servicios en la nube.</p>
+                            <p class="company-description">Líder en búsqueda web, publicidad online y servicios en la
+                                nube.</p>
                         </div>
                         <div class="company-meta">
                             <div class="meta-item">
@@ -271,7 +283,8 @@
                     <div class="company-card" data-industry="retail" data-status="active">
                         <div class="company-card-header">
                             <div class="company-logo retail">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg"
+                                    alt="Amazon">
                             </div>
                             <div class="company-actions">
                                 <button class="btn-icon edit-company-btn" title="Editar">
@@ -285,7 +298,8 @@
                         <div class="company-info">
                             <h3>Amazon</h3>
                             <span class="company-industry retail">Retail</span>
-                            <p class="company-description">Líder mundial en comercio electrónico y servicios en la nube (AWS).</p>
+                            <p class="company-description">Líder mundial en comercio electrónico y servicios en la nube
+                                (AWS).</p>
                         </div>
                         <div class="company-meta">
                             <div class="meta-item">
@@ -328,7 +342,8 @@
                     <div class="company-card" data-industry="finance" data-status="active">
                         <div class="company-card-header">
                             <div class="company-logo finance">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/f/ff/JPMorgan_Chase_Logo_2008_1.svg" alt="JPMorgan Chase">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/f/ff/JPMorgan_Chase_Logo_2008_1.svg"
+                                    alt="JPMorgan Chase">
                             </div>
                             <div class="company-actions">
                                 <button class="btn-icon edit-company-btn" title="Editar">
@@ -385,7 +400,8 @@
                     <div class="company-card" data-industry="health" data-status="active">
                         <div class="company-card-header">
                             <div class="company-logo health">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Johnson_and_Johnson_Logo.svg" alt="Johnson & Johnson">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Johnson_and_Johnson_Logo.svg"
+                                    alt="Johnson & Johnson">
                             </div>
                             <div class="company-actions">
                                 <button class="btn-icon edit-company-btn" title="Editar">
@@ -399,7 +415,8 @@
                         <div class="company-info">
                             <h3>Johnson & Johnson</h3>
                             <span class="company-industry health">Salud</span>
-                            <p class="company-description">Empresa multinacional de dispositivos médicos, farmacéuticos y productos de consumo.</p>
+                            <p class="company-description">Empresa multinacional de dispositivos médicos, farmacéuticos
+                                y productos de consumo.</p>
                         </div>
                         <div class="company-meta">
                             <div class="meta-item">
@@ -442,7 +459,8 @@
                     <div class="company-card" data-industry="finance" data-status="inactive">
                         <div class="company-card-header">
                             <div class="company-logo finance">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/c/cc/Visa_2021.svg" alt="Visa Inc.">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/c/cc/Visa_2021.svg"
+                                    alt="Visa Inc.">
                             </div>
                             <div class="company-actions">
                                 <button class="btn-icon edit-company-btn" title="Editar">
@@ -456,7 +474,8 @@
                         <div class="company-info">
                             <h3>Visa Inc.</h3>
                             <span class="company-industry finance">Finanzas</span>
-                            <p class="company-description">Corporación multinacional de servicios financieros y pagos electrónicos.</p>
+                            <p class="company-description">Corporación multinacional de servicios financieros y pagos
+                                electrónicos.</p>
                         </div>
                         <div class="company-meta">
                             <div class="meta-item">
@@ -499,7 +518,8 @@
                     <div class="company-card" data-industry="retail" data-status="active">
                         <div class="company-card-header">
                             <div class="company-logo retail">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/Walmart_logo.svg" alt="Walmart">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/Walmart_logo.svg"
+                                    alt="Walmart">
                             </div>
                             <div class="company-actions">
                                 <button class="btn-icon edit-company-btn" title="Editar">
@@ -513,7 +533,8 @@
                         <div class="company-info">
                             <h3>Walmart</h3>
                             <span class="company-industry retail">Retail</span>
-                            <p class="company-description">Corporación multinacional de tiendas de venta al por menor.</p>
+                            <p class="company-description">Corporación multinacional de tiendas de venta al por menor.
+                            </p>
                         </div>
                         <div class="company-meta">
                             <div class="meta-item">
@@ -565,12 +586,13 @@
                             <div class="table-cell">Estado</div>
                             <div class="table-cell">Acciones</div>
                         </div>
-                        
+
                         <!-- Company Row -->
                         <div class="table-row" data-industry="tech" data-status="active">
                             <div class="table-cell company-cell">
                                 <div class="company-logo-small tech">
-                                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple Inc.">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
+                                        alt="Apple Inc.">
                                 </div>
                                 <span>Apple Inc.</span>
                             </div>
@@ -593,7 +615,8 @@
                         <div class="table-row" data-industry="tech" data-status="active">
                             <div class="table-cell company-cell">
                                 <div class="company-logo-small tech">
-                                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg"
+                                        alt="Microsoft">
                                 </div>
                                 <span>Microsoft</span>
                             </div>
@@ -616,7 +639,8 @@
                         <div class="table-row" data-industry="tech" data-status="active">
                             <div class="table-cell company-cell">
                                 <div class="company-logo-small tech">
-                                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg"
+                                        alt="Google">
                                 </div>
                                 <span>Google</span>
                             </div>
@@ -639,7 +663,8 @@
                         <div class="table-row" data-industry="retail" data-status="active">
                             <div class="table-cell company-cell">
                                 <div class="company-logo-small retail">
-                                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg"
+                                        alt="Amazon">
                                 </div>
                                 <span>Amazon</span>
                             </div>
@@ -662,7 +687,8 @@
                         <div class="table-row" data-industry="finance" data-status="active">
                             <div class="table-cell company-cell">
                                 <div class="company-logo-small finance">
-                                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/ff/JPMorgan_Chase_Logo_2008_1.svg" alt="JPMorgan Chase">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/ff/JPMorgan_Chase_Logo_2008_1.svg"
+                                        alt="JPMorgan Chase">
                                 </div>
                                 <span>JPMorgan Chase</span>
                             </div>
@@ -685,7 +711,8 @@
                         <div class="table-row" data-industry="health" data-status="active">
                             <div class="table-cell company-cell">
                                 <div class="company-logo-small health">
-                                    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Johnson_and_Johnson_Logo.svg" alt="Johnson & Johnson">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Johnson_and_Johnson_Logo.svg"
+                                        alt="Johnson & Johnson">
                                 </div>
                                 <span>Johnson & Johnson</span>
                             </div>
@@ -708,7 +735,8 @@
                         <div class="table-row" data-industry="finance" data-status="inactive">
                             <div class="table-cell company-cell">
                                 <div class="company-logo-small finance">
-                                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/cc/Visa_2021.svg" alt="Visa Inc.">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/cc/Visa_2021.svg"
+                                        alt="Visa Inc.">
                                 </div>
                                 <span>Visa Inc.</span>
                             </div>
@@ -731,7 +759,8 @@
                         <div class="table-row" data-industry="retail" data-status="active">
                             <div class="table-cell company-cell">
                                 <div class="company-logo-small retail">
-                                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/Walmart_logo.svg" alt="Walmart">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/Walmart_logo.svg"
+                                        alt="Walmart">
                                 </div>
                                 <span>Walmart</span>
                             </div>
@@ -781,15 +810,23 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form id="company-form">
+                <form id="company-form" action="XZ" method="post" enctype="multipart/form-data">
+                    <input type="hidden" name="csrf_token" id="csrf_token_input"
+                        value="<?php echo htmlspecialchars($_SESSION['csrf_token']); ?>">
+                    <div class="form-group">
+                        <label for="company-name">NIT</label>
+                        <input type="text" name="NIT" id="company-name" class="form-input" placeholder="Identificación"
+                            required>
+                    </div>
                     <div class="form-group">
                         <label for="company-name">Nombre de la empresa</label>
-                        <input type="text" id="company-name" class="form-input" placeholder="Nombre de la empresa" required>
+                        <input type="text" name="NOMBRE" id="company-name" class="form-input"
+                            placeholder="Nombre de la empresa" required>
                     </div>
                     <div class="form-row">
                         <div class="form-group">
                             <label for="company-industry">Industria</label>
-                            <select id="company-industry" class="form-select" required>
+                            <select name="INDUSTRIA" id="company-industry" class="form-select" required>
                                 <option value="">Seleccionar industria</option>
                                 <option value="tech">Tecnología</option>
                                 <option value="finance">Finanzas</option>
@@ -800,7 +837,7 @@
                         </div>
                         <div class="form-group">
                             <label for="company-status">Estado</label>
-                            <select id="company-status" class="form-select" required>
+                            <select name="ESTADO" id="company-status" class="form-select" required>
                                 <option value="">Seleccionar estado</option>
                                 <option value="active">Activa</option>
                                 <option value="inactive">Inactiva</option>
@@ -809,7 +846,8 @@
                     </div>
                     <div class="form-group">
                         <label for="company-description">Descripción</label>
-                        <textarea id="company-description" class="form-textarea" placeholder="Descripción breve de la empresa" required></textarea>
+                        <textarea name="DESCRIPCION" id="company-description" class="form-textarea"
+                            placeholder="Descripción breve de la empresa" required></textarea>
                     </div>
                     <div class="form-group">
                         <label for="company-logo">Logo</label>
@@ -821,55 +859,29 @@
                                 <i class="fas fa-camera"></i>
                                 <span>Subir logo</span>
                             </label>
-                            <input type="file" id="company-logo-input" accept="image/*" hidden>
+                            <input type="file" name="LOGO" id="company-logo-input" accept="image/*" hidden>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group">
                             <label for="company-location">Ubicación</label>
-                            <input type="text" id="company-location" class="form-input" placeholder="Ciudad, País" required>
+                            <input type="text" name="UBICACION" id="company-location" class="form-input"
+                                placeholder="Ciudad, País" required>
                         </div>
                         <div class="form-group">
                             <label for="company-website">Sitio web</label>
-                            <input type="url" id="company-website" class="form-input" placeholder="www.ejemplo.com">
+                            <input type="url" name="WEB" id="company-website" class="form-input"
+                                placeholder="www.ejemplo.com">
                         </div>
                     </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="company-employees">Número de empleados</label>
-                            <input type="number" id="company-employees" class="form-input" placeholder="Ej: 1000">
-                        </div>
-                        <div class="form-group">
-                            <label for="company-founded">Año de fundación</label>
-                            <input type="number" id="company-founded" class="form-input" placeholder="Ej: 2010">
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="company-market-value">Valor de mercado</label>
-                            <input type="text" id="company-market-value" class="form-input" placeholder="Ej: $1.2B">
-                        </div>
-                        <div class="form-group">
-                            <label for="company-rating">Rating</label>
-                            <select id="company-rating" class="form-select">
-                                <option value="">Seleccionar rating</option>
-                                <option value="A+">A+</option>
-                                <option value="A">A</option>
-                                <option value="A-">A-</option>
-                                <option value="B+">B+</option>
-                                <option value="B">B</option>
-                                <option value="B-">B-</option>
-                                <option value="C+">C+</option>
-                                <option value="C">C</option>
-                                <option value="C-">C-</option>
-                            </select>
-                        </div>
-                    </div>
+                    <input type="hidden" name="accionSaveCompany" value="Registrar_Empresa">
+                    <input class="btn btn-primary" type="submit" value="Guardar">
+
                 </form>
             </div>
             <div class="modal-footer">
                 <button class="btn btn-secondary" id="cancel-company">Cancelar</button>
-                <button class="btn btn-primary" id="save-company">Guardar</button>
+                <input class="btn btn-primary" type="submit" value="Guardar">
             </div>
         </div>
     </div>
@@ -949,4 +961,5 @@
     <script src="Funcion_Empresa"></script>
     <script src="Funcion_Sincronizacion"></script>
 </body>
+
 </html>

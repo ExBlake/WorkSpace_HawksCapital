@@ -1527,22 +1527,26 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     `;
     document.head.appendChild(style);
-    
-    // Inicializar Power BI (simulado)
     function initPowerBI() {
-        // Aquí iría el código para inicializar el iframe de Power BI
         console.log('Power BI inicializado');
-        
-        // Ejemplo: Reemplazar placeholder con iframe real después de un tiempo
+    
         setTimeout(() => {
             const iframe = document.createElement('iframe');
             iframe.title = "Reporte Power BI";
             iframe.width = "100%";
             iframe.height = "100%";
-            iframe.src = "https://app.powerbi.com/view?r=eyJrIjoiNjk1MzBkMTEtYjEwMC00OWUwLTlmZjctNjhiMTYyNGQ3NzNmIiwidCI6ImU5ZjY3ZGJkLTQ5MWMtNGY1NS1hMWM2LTE0OTA1Y2E3OGE4NiIsImMiOjJ9";
+    
+            // Usa la variable global definida en el PHP
+            if (typeof informeUrl !== "undefined" && informeUrl) {
+                iframe.src = informeUrl;
+            } else {
+                iframe.src = "about:blank";
+                console.warn("No se encontró el informe para este plan.");
+            }
+    
             iframe.frameBorder = "0";
             iframe.allowFullscreen = true;
-            
+    
             const powerbiContent = document.querySelector('.powerbi-content');
             if (powerbiContent) {
                 powerbiContent.innerHTML = '';
@@ -1550,6 +1554,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         }, 1500);
     }
+    
     
     // Inicializar Power BI
     initPowerBI();

@@ -1,3 +1,14 @@
+<?php 
+    require_once(__DIR__ . '/../../Controller/UserController.php');
+    $userController = new UserController();
+    $userDetails = $userController->GetUserBySessionController();
+    $userCompany = $userController->GetPlansByCompanyController();
+
+
+    $rolUsuario = isset($userDetails['Rol']) ? $userDetails['Rol'] : 'Empleado'; // valor por defecto
+    // Se asume que el usuario solo pertenece a una empresa, por lo que el nombre de la empresa es el de la primera fila.
+    $companyName = (!empty($userCompany) && isset($userCompany[0]['Empresa'])) ? $userCompany[0]['Empresa'] : 'Sin Empresa';
+?>
 <div class="sidebar">
     <div class="sidebar-header">
         <div class="logo">
@@ -13,31 +24,70 @@
 
     <div class="sidebar-menu">
         <ul>
+            
             <li>
-                <a href="Dashboard.html">
+                <a href="Tablero">
                     <i class="fas fa-house"></i>
                     <span>Dashboard</span>
                 </a>
             </li>
+            <?php if ($rolUsuario === 'Administrador'){ ?>
             <li>
-                <a href="#content">
+                <a href="Empresas">
                     <i class="fas fa-layer-group"></i>
-                    <span>Content</span>
-                </a>
-            </li>
-            <li class="has-submenu">
-                <a href="#companies">
-                    <i class="fas fa-building"></i>
                     <span>Empresas</span>
-                    <i class="fas fa-chevron-right submenu-arrow"></i>
                 </a>
-                <ul class="submenu">
-                    <li><a href="PowerBI.html">Apple Inc.</a></li>
-                    <li><a href="#empresa2">Microsoft</a></li>
-                    <li><a href="#empresa3">Google</a></li>
-                    <li><a href="#empresa4">Amazon</a></li>
-                </ul>
             </li>
+            <li>
+                <a href="Usuarios">
+                <i class="fa-solid fa-users"></i>
+                <span>Usuarios</span>
+                </a>
+            </li>
+            <?php } ?>
+            <!-- Menú dinámico basado en la empresa del usuario y sus planes -->
+            <?php 
+            if (!empty($userCompany)) {
+                // Agrupar planes por empresa
+                $empresas = [];
+                foreach ($userCompany as $plan) {
+                    $empresas[$plan['Empresa']][] = $plan;
+                }
+            }
+            ?>
+
+            <?php if (!empty($empresas)): ?>
+                <?php foreach ($empresas as $empresa => $planes): ?>
+                    <li class="has-submenu">
+                        <a href="#<?php echo htmlspecialchars($empresa); ?>">
+                            <i class="fas fa-building"></i>
+                            <span><?php echo htmlspecialchars($empresa); ?></span>
+                            <i class="fas fa-chevron-right submenu-arrow"></i>
+                        </a>
+                        <ul class="submenu">
+                            <?php foreach ($planes as $plan): ?>
+                                <li>
+                                    <a href="Informes?plan=<?php echo urlencode($plan['Id_Planes']); ?>&empresa=<?php echo urlencode($plan['Id_Empresa']); ?>">
+                                        <?php echo htmlspecialchars($plan['Plan']); ?>
+                                    </a>
+                                </li>
+                            <?php endforeach; ?>
+                        </ul>
+                    </li>
+                <?php endforeach; ?>
+            <?php else: ?>
+                <li class="has-submenu">
+                    <a href="#no-company">
+                        <i class="fas fa-building"></i>
+                        <span>Sin Empresa</span>
+                        <i class="fas fa-chevron-right submenu-arrow"></i>
+                    </a>
+                    <ul class="submenu">
+                        <li><a href="#">No hay planes</a></li>
+                    </ul>
+                </li>
+            <?php endif; ?>
+
             <li class="has-submenu">
                 <a href="#analytics">
                     <i class="fas fa-chart-simple"></i>
@@ -51,28 +101,16 @@
                 </ul>
             </li>
             <li>
-                <a href="#likes">
-                    <i class="fas fa-heart"></i>
-                    <span>Likes</span>
-                </a>
-            </li>
-            <li>
                 <a href="#comments">
                     <i class="fas fa-message"></i>
-                    <span>Comments</span>
-                </a>
-            </li>
-            <li>
-                <a href="#share">
-                    <i class="fas fa-arrow-up-from-bracket"></i>
-                    <span>Share</span>
+                    <span>Comentarios</span>
                 </a>
             </li>
         </ul>
     </div>
 
     <div class="sidebar-footer">
-        <a href="settings.html" class="active">
+        <a href="Configuracion" class="active">
             <i class="fas fa-gear"></i>
             <span>Settings</span>
         </a>

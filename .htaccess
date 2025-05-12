@@ -1,7 +1,6 @@
 RewriteEngine On
 
 # ----------- PHP REWRITES -------------
-
 # Reescribe la URL para 'Index.php'
 RewriteRule ^Inicio$ index.php [L]
 
@@ -9,7 +8,7 @@ RewriteRule ^Inicio$ index.php [L]
 RewriteRule ^Configuracion$ View/Settings.php [L]
 
 # Reescribe la URL para 'PowerBI.php'
-RewriteRule ^PowerBI$ View/PowerBI.php [L]
+RewriteRule ^Informes$ View/PowerBI.php [L]
 
 # Reescribe la URL para 'Users.php'
 RewriteRule ^Usuarios$ View/Users.php [L]
@@ -26,8 +25,12 @@ RewriteRule ^Iniciar_Sesion$ View/LogIn.php [L]
 # Reescribe la URL para 'SignUp.php'
 RewriteRule ^Registrar$ View/SignUp.php [L]
 
+# Reescribe la URL para 'Index.php'
+RewriteRule ^XZ$ Controller/Uzz.php [L]
+
 
 # ----------- PHP REWRITES -------------
+
 
 
 # ----------- CSS REWRITES -------------
