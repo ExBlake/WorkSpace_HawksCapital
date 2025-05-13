@@ -25,8 +25,11 @@ RewriteRule ^Iniciar_Sesion$ View/LogIn.php [L]
 # Reescribe la URL para 'SignUp.php'
 RewriteRule ^Registrar$ View/SignUp.php [L]
 
-# Reescribe la URL para 'Index.php'
+# Reescribe la URL para 'Uzz.php'
 RewriteRule ^XZ$ Controller/Uzz.php [L]
+
+# Reescribe la URL para 'Comments.php'
+RewriteRule ^PQRS$ View/Comments.php [L]
 
 
 # ----------- PHP REWRITES -------------
@@ -59,6 +62,9 @@ RewriteRule ^Estilos_Registros$ View/css/Styles_SignUp.css [L]
 # Reescribe la URL para 'Styles_Users.css'
 RewriteRule ^Estilos_Usuarios$ View/css/Styles_Users.css [L]
 
+# Reescribe la URL para 'Styles_Comments.css'
+RewriteRule ^Estilos_PQRS$ View/css/Styles_Comments.css [L]
+
 
 # ----------- CSS REWRITES -------------
 
@@ -88,6 +94,9 @@ RewriteRule ^Funcion_Sincronizacion$ View/js/Script_syncSettings.js [L]
 
 # Reescribe la URL para 'Script_Users.js'
 RewriteRule ^Funcion_Usuarios$ View/js/Script_Users.js [L]
+
+# Reescribe la URL para 'Script_Comments.js'
+RewriteRule ^Funcion_PQRS$ View/js/Script_Comments.js [L]
 
 # ----------- JS REWRITES -------------
 
